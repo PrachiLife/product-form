@@ -1,0 +1,175 @@
+{
+  "product": [
+    {
+      "title": "Product ID",
+      "type": "text",
+      "required": false,
+      "readonly": true,
+      "inputKey": "productId"
+    },
+    {
+      "title": "Product Name",
+      "type": "text",
+      "required": true,
+      "inputKey": "productName"
+    },
+    {
+      "title": "Product Category",
+      "type": "dropdown",
+      "required": true,
+      "inputKey": "productCategory",
+      "options": [
+        { "label": "Electronics", "value": "electronics" },
+        { "label": "Clothing", "value": "clothing" },
+        { "label": "Food & Beverages", "value": "food_and_beverages" },
+        { "label": "Home & Garden", "value": "home_and_garden" },
+        {
+          "label": "Beauty & Personal Care",
+          "value": "beauty_and_personal_care"
+        },
+        { "label": "Other", "value": "other" }
+      ],
+      "subquestions": {
+        "electronics": {
+          "condition": "electronics",
+          "type": "dropdown",
+          "required": true,
+          "inputKey": "subCategory",
+          "options": [
+            { "label": "Mobile Phones", "value": "mobile_phones" },
+            {
+              "label": "Laptops & Computers",
+              "value": "laptops_and_computers"
+            },
+            { "label": "Televisions", "value": "televisions" },
+            { "label": "Cameras", "value": "cameras" }
+          ],
+          "subquestions": {
+            "mobile_phones": {
+              "condition": "mobile_phones",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Smartphones", "value": "smart_phones" },
+                { "label": "Phone Cases", "value": "phone_cases" },
+                { "label": "Screen Protectors", "value": "screen_protectors" },
+                { "label": "Wireless Earbuds", "value": "wireless_earbuds" }
+              ]
+            },
+            "laptops_and_computers": {
+              "condition": "laptops_and_computers",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Smartphones", "value": "smart_phones" },
+                { "label": "Phone Cases", "value": "phone_cases" },
+                { "label": "Screen Protectors", "value": "screen_protectors" },
+                { "label": "Wireless Earbuds", "value": "wireless_earbuds" }
+              ]
+            },
+            "televisions": {
+              "condition": "televisions",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Smartphones", "value": "smart_phones" },
+                { "label": "Phone Cases", "value": "phone_cases" },
+                { "label": "Screen Protectors", "value": "screen_protectors" },
+                { "label": "Wireless Earbuds", "value": "wireless_earbuds" }
+              ]
+            },
+            "cameras": {
+              "condition": "cameras",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Smartphones", "value": "smart_phones" },
+                { "label": "Phone Cases", "value": "phone_cases" },
+                { "label": "Screen Protectors", "value": "screen_protectors" },
+                { "label": "Wireless Earbuds", "value": "wireless_earbuds" }
+              ]
+            }
+          }
+        },
+        "clothing": {
+          "condition": "clothing",
+          "type": "dropdown",
+          "required": true,
+          "inputKey": "subCategory",
+          "options": [
+            { "label": "Men", "value": "men" },
+            { "label": "Women", "value": "women" },
+            { "label": "Kids", "value": "kids" },
+            { "label": "Accessories", "value": "accessories" }
+          ],
+          "subquestions": {
+            "men": {
+              "condition": "men",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "T-Shirts", "value": "tshirts" },
+                { "label": "Shirts", "value": "shirts" },
+                { "label": "Jeans", "value": "jeans" },
+                { "label": "Jackets", "value": "jackets" }
+              ]
+            },
+            "women": {
+              "condition": "women",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Dresses", "value": "dresses" },
+                { "label": "Tops", "value": "tops" },
+                { "label": "Skirts", "value": "skirts" },
+                { "label": "Leggings", "value": "leggings" }
+              ]
+            },
+            "kids": {
+              "condition": "kids",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "T-Shirts", "value": "kids_tshirts" },
+                { "label": "Shorts", "value": "kids_shorts" },
+                { "label": "Frocks", "value": "kids_frocks" },
+                { "label": "Sets", "value": "kids_sets" }
+              ]
+            },
+            "accessories": {
+              "condition": "accessories",
+              "type": "radio",
+              "required": true,
+              "inputKey": "productType",
+              "options": [
+                { "label": "Hats", "value": "hats" },
+                { "label": "Belts", "value": "belts" },
+                { "label": "Scarves", "value": "scarves" },
+                { "label": "Sunglasses", "value": "sunglasses" }
+              ]
+            }
+          }
+        },
+        "other":{
+            "condition":"other",
+            "type":"text",
+            "required": true,
+            "inputKey": "subCategory"
+        }
+      }
+    },
+    {
+        "type":"text",
+        "title":"Brand Name",
+        "required":true,
+        "inputKey":"brandName"
+    }
+  ]
+}
